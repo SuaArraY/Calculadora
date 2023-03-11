@@ -10,6 +10,7 @@
         android:id="@+id/txtPrimerValor"
         android:layout_width="281dp"
         android:layout_height="29dp"
+        android:hint="0.0"
         android:textAlignment="textEnd"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,6 +35,7 @@
         android:id="@+id/btnDivi"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:onClick="clicOperacion"
         android:text="/"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,13 +74,14 @@
         android:id="@+id/btnSuma"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:onClick="clicOperacion"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintVertical_bias="0.528" />
 
     <Button
         android:id="@+id/btn5"
@@ -149,6 +152,7 @@
         android:id="@+id/btnMulti"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:onClick="clicOperacion"
         android:text="*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -174,13 +178,14 @@
         android:id="@+id/btnResta"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:onClick="clicOperacion"
         android:text="-"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.528" />
+        app:layout_constraintVertical_bias="0.651" />
 
     <Button
         android:id="@+id/btn7"
@@ -274,6 +279,7 @@
         android:id="@+id/txtSegunValor"
         android:layout_width="276dp"
         android:layout_height="31dp"
+        android:hint="0.0"
         android:textAlignment="textEnd"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

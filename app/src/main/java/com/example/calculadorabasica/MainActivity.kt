@@ -6,13 +6,26 @@ import android.view.View
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+
+    //variables
+    //0-> nada, 1->Suma, 2 -> resa; 3-> mul; 4 -> div
+    var oper: Int =0
+
+    var numero1: Double = 0.0
+    lateinit var tv_num1: TextView
+    lateinit var  tv_num2: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //llamar a las ventanas
+        tv_num1 = findViewById(R.id.txtPrimerValor)
+        tv_num2 = findViewById(R.id.txtSegunValor)
+
     }
 
     fun presionarDigito(view:View){
-        val tv_num2: TextView = findViewById(R.id.txtSegunValor)
+        //val tv_num2: TextView = findViewById(R.id.txtSegunValor)
         val num2: String = tv_num2.text.toString()
 
         when(view.id){
@@ -28,7 +41,32 @@ class MainActivity : AppCompatActivity() {
             R.id.btn9 -> tv_num2.setText(num2 + "9")
             R.id.btnPunto -> tv_num2.setText(num2 + ".")
         }
+    }
 
+    fun clicOperacion(view: View){
+        numero1 = tv_num2.text.toString().toDouble()
+        var num2_text: String = tv_num2.text.toString()
+        tv_num2.setText("")
+
+        when(view.id){
+            R.id.btnSuma ->{
+                tv_num1.setText(num2_text + "+")
+                oper = 1
+            }
+            R.id.btnResta ->{
+                tv_num1.setText(num2_text + "-")
+                oper = 2
+            }
+            R.id.btnMulti ->{
+                tv_num1.setText(num2_text + "*")
+                oper = 3
+            }
+            R.id.btnDivi ->{
+                tv_num1.setText(num2_text + "/")
+                oper = 4
+            }
+
+        }
 
     }
 
