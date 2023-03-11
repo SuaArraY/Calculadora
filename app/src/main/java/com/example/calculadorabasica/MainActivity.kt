@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         tv_num1 = findViewById(R.id.txtPrimerValor)
         tv_num2 = findViewById(R.id.txtSegunValor)
 
-        val btnBorrar: Button = findViewById(R.id.btnEliminar)
+        val btnBorrar: Button = findViewById(R.id.btnNuevo)
         val btnIgual: Button = findViewById(R.id.btnIgual)
 
         btnIgual.setOnClickListener{
